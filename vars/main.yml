@@ -1,5 +1,5 @@
 ---
 # vars file for sigil
-sigil_tgz: sigil_{{sigil_ver}}_{{ansible_os_family}}_{{ansible_architecture}}.tgz
+sigil_tgz: sigil_{{sigil_ver}}_{{ansible_system}}_{{ansible_architecture}}.tgz
 sigil_tgz_url: '{{sigil_mirror}}/v{{sigil_ver}}/{{sigil_tgz}}'
 sigil_target_dir: '{{sigil_install_dir}}/sigil-{{sigil_ver}}'
