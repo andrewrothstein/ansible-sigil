@@ -1,5 +1,6 @@
 andrewrothstein.sigil
 =========
+[![Build Status](https://travis-ci.org/andrewrothstein/ansible-sigil.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-sigil)
 
 Installs [sigil](https://github.com/gliderlabs/sigil)
 
