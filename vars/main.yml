@@ -1,5 +1,9 @@
 ---
 # vars file for sigil
-sigil_tgz: sigil_{{sigil_ver}}_{{ansible_system}}_{{ansible_architecture}}.tgz
-sigil_tgz_url: '{{sigil_mirror}}/v{{sigil_ver}}/{{sigil_tgz}}'
-sigil_target_dir: '{{sigil_install_dir}}/sigil-{{sigil_ver}}'
+sigil_os: '{{ ansible_system | lower }}'
+sigil_arch: '{{ sigil_arch_map[ansible_architecture] }}'
+sigil_tgz: gliderlabs-sigil_{{ sigil_ver }}_{{ sigil_os }}_{{ sigil_arch }}.tgz
+sigil_tmp_tgz: '{{ sigil_tmp_dir | default("/tmp") }}/{{ sigil_tgz }}'
+# https://github.com/gliderlabs/sigil/releases/download/v0.10.1/gliderlabs-sigil_0.10.1_linux_amd64.tgz
+sigil_tgz_url: '{{ sigil_mirror }}/v{{ sigil_ver }}/{{ sigil_tgz }}'
+sigil_target_dir: '{{ sigil_install_dir }}/sigil-{{ sigil_ver }}'

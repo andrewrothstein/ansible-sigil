@@ -1,32 +1,34 @@
 ---
+- include_role:
+    name: andrewrothstein.unarchivedeps
 - name: download tgz
-  become: yes
+  become: true
   become_user: root
   get_url:
-    url: '{{sigil_tgz_url}}'
-    dest: /tmp/{{sigil_tgz}}
+    url: '{{ sigil_tgz_url }}'
+    dest: '{{ sigil_tmp_tgz }}'
     mode: 0644
 
-- name: mkdir versioned dir
-  become: yes
+- name: mkdir {{ sigil_target_dir }}
+  become: true
   become_user: root
   file:
-    path: '{{sigil_target_dir}}'
+    path: '{{ sigil_target_dir }}'
     state: directory
     mode: 0755
 
-- name: unarchive...
-  become: yes
+- name: unarchiving {{ sigil_tmp_tgz }} into {{ sigil_target_dir }}
+  become: true
   become_user: root
   unarchive:
-    copy: no
-    src: /tmp/{{sigil_tgz}}
-    dest: '{{sigil_target_dir}}'
+    remote_src: true
+    src: '{{ sigil_tmp_tgz }}'
+    dest: '{{ sigil_target_dir }}'
 
-- name: link...
-  become: yes
+- name: linking...
+  become: true
   become_user: root
   file:
-    src: '{{sigil_target_dir}}/sigil'
-    dest: '{{sigil_install_dir}}/sigil'
+    src: '{{ sigil_target_dir }}/gliderlabs-sigil-{{ sigil_arch }}'
+    dest: '{{ sigil_install_dir }}/sigil'
     state: link

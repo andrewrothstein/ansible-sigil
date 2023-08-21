@@ -1,28 +1,33 @@
-dependencies:
-- role: andrewrothstein.unarchive-deps
-  version: v1.1.2
+---
 galaxy_info:
   author: Andrew Rothstein
   company: BlackRock
   description: installs sigil
   galaxy_tags:
-  - templating
+    - templating
   license:
-  - MIT
+    - MIT
   min_ansible_version: 2.0
   platforms:
-  - name: EL
-    versions:
-    - all
-  - name: Fedora
-    versions:
-    - all
-  - name: Ubuntu
-    versions:
-    - all
-  - name: Alpine
-    versions:
-    - all
-  - name: MacOSX
-    version:
-    - all
+    - name: Alpine
+      versions:
+        - all
+    - name: Archlinux
+      versions:
+        - all
+    - name: Debian
+      versions:
+        - bookworm
+        - bullseye
+    - name: EL
+      versions:
+        - 8
+        - 9
+    - name: Fedora
+      versions:
+        - 37
+        - 38
+    - name: Ubuntu
+      versions:
+        - focal
+        - jammy

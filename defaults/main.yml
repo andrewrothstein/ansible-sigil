@@ -1,5 +1,9 @@
 ---
 # defaults file for sigil
-sigil_ver: '0.4.0'
+sigil_ver: 0.10.1
+sigil_arch_map:
+  aarch64: arm64
+  arm64: arm64
+  x86_64: amd64
 sigil_mirror: https://github.com/gliderlabs/sigil/releases/download
 sigil_install_dir: /usr/local/bin
