@@ -1,34 +1,16 @@
 ---
-- include_role:
-    name: andrewrothstein.unarchivedeps
-- name: download tgz
+- name: Downloading {{ sigil_url }} to {{ sigil_exe }}
   become: true
   become_user: root
-  get_url:
-    url: '{{ sigil_tgz_url }}'
-    dest: '{{ sigil_tmp_tgz }}'
-    mode: 0644
+  ansible.builtin.get_url:
+    url: '{{ sigil_url }}'
+    dest: '{{ sigil_exe }}'
+    mode: '755'
 
-- name: mkdir {{ sigil_target_dir }}
+- name: Linking {{ sigil_link }} to {{ sigil_exe }}
   become: true
   become_user: root
-  file:
-    path: '{{ sigil_target_dir }}'
-    state: directory
-    mode: 0755
-
-- name: unarchiving {{ sigil_tmp_tgz }} into {{ sigil_target_dir }}
-  become: true
-  become_user: root
-  unarchive:
-    remote_src: true
-    src: '{{ sigil_tmp_tgz }}'
-    dest: '{{ sigil_target_dir }}'
-
-- name: linking...
-  become: true
-  become_user: root
-  file:
-    src: '{{ sigil_target_dir }}/gliderlabs-sigil-{{ sigil_arch }}'
-    dest: '{{ sigil_install_dir }}/sigil'
+  ansible.builtin.file:
+    src: '{{ sigil_exe }}'
+    dest: '{{ sigil_link }}'
     state: link

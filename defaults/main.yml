@@ -1,9 +1,55 @@
 ---
 # defaults file for sigil
-sigil_ver: 0.10.1
+sigil_ver: 0.11.4
 sigil_arch_map:
   aarch64: arm64
   arm64: arm64
   x86_64: amd64
 sigil_mirror: https://github.com/gliderlabs/sigil/releases/download
 sigil_install_dir: /usr/local/bin
+sigil_checksums:
+  0.11.0:
+    # https://github.com/gliderlabs/sigil/releases/download/v0.11.0/sigil-darwin-amd64
+    darwin-amd64: sha256:45f56e2fa56af229c4f271ee42903a80e2d5f7e0583c5f97f3f99154260785c0
+    # https://github.com/gliderlabs/sigil/releases/download/v0.11.0/sigil-darwin-arm64
+    darwin-arm64: sha256:73d12885e455b407ea702b729e2b1954c8b7d652f501206b0b44d28f38336fd2
+    # https://github.com/gliderlabs/sigil/releases/download/v0.11.0/sigil-linux-amd64
+    linux-amd64: sha256:510b0bcf7a76aabc447f334d0a13715ffa4922600ff8501a9826a31a4adc7033
+    # https://github.com/gliderlabs/sigil/releases/download/v0.11.0/sigil-linux-arm64
+    linux-arm64: sha256:c3fb90daac8c51776937ae319e264cf38ea7e027cdff207e9438f2e370748750
+  0.11.1:
+    # https://github.com/gliderlabs/sigil/releases/download/v0.11.1/sigil-darwin-amd64
+    darwin-amd64: sha256:5b2c916c1e347dcb6d0d1b156fc278f9dea87438c9468d0b509694db71531191
+    # https://github.com/gliderlabs/sigil/releases/download/v0.11.1/sigil-darwin-arm64
+    darwin-arm64: sha256:824f2bb47be7b8015ed1d9fa9c982e3f79d3bf780982df0667e750e1851c5e8b
+    # https://github.com/gliderlabs/sigil/releases/download/v0.11.1/sigil-linux-amd64
+    linux-amd64: sha256:c431c112b8649ca211c6a32c7570c2f7e80901d2353bd9c238e00083246a64a4
+    # https://github.com/gliderlabs/sigil/releases/download/v0.11.1/sigil-linux-arm64
+    linux-arm64: sha256:17b1f0c0f150a2ca8e68d21636a39b3de82852f4afbedb5fbb3b2a165cfb49ee
+  0.11.2:
+    # https://github.com/gliderlabs/sigil/releases/download/v0.11.2/sigil-darwin-amd64
+    darwin-amd64: sha256:3f04786131e007c562891b53f5267d283d506aea7cda4925adab5749eb55ed7a
+    # https://github.com/gliderlabs/sigil/releases/download/v0.11.2/sigil-darwin-arm64
+    darwin-arm64: sha256:a80352adb5d0888554a0ef2b9b7489b8a3f395e8c9cda7e935ad5cf2f397f2ce
+    # https://github.com/gliderlabs/sigil/releases/download/v0.11.2/sigil-linux-amd64
+    linux-amd64: sha256:c5e5c96334a6462fe737e2c2dda5a67c0e2ef435b1fd8ef7bd567d04380a4721
+    # https://github.com/gliderlabs/sigil/releases/download/v0.11.2/sigil-linux-arm64
+    linux-arm64: sha256:48b561636cf2082edfa4eaf05139eab5f7d55e89591fac251f0c27b25070c2bf
+  0.11.3:
+    # https://github.com/gliderlabs/sigil/releases/download/v0.11.3/sigil-darwin-amd64
+    darwin-amd64: sha256:20c86b9dcb9a50bedba7746dd0f558e588c10f96e93b851ae07a8d5260592ef5
+    # https://github.com/gliderlabs/sigil/releases/download/v0.11.3/sigil-darwin-arm64
+    darwin-arm64: sha256:f3974919c32f4c2bb5b694749de6ab8411ab9d1aa057f0f02bdeb7f833358ca0
+    # https://github.com/gliderlabs/sigil/releases/download/v0.11.3/sigil-linux-amd64
+    linux-amd64: sha256:2a33b623327862f17f6e35f77fe0ccf81d45e2569e5aec8104dda6751f1332cc
+    # https://github.com/gliderlabs/sigil/releases/download/v0.11.3/sigil-linux-arm64
+    linux-arm64: sha256:5733fae29678759759726dc2e6699bd4caadd9faf8fd2ddd2daf3193ed7954b9
+  0.11.4:
+    # https://github.com/gliderlabs/sigil/releases/download/v0.11.4/sigil-darwin-amd64
+    darwin-amd64: sha256:aa0a069469c954d4dd5c16a6cbc060c74de77620655482f2b1753b68b7acf172
+    # https://github.com/gliderlabs/sigil/releases/download/v0.11.4/sigil-darwin-arm64
+    darwin-arm64: sha256:402928410cd0bd48faf1a656d5c570a8b58760b74b099e86624185afd4077bf7
+    # https://github.com/gliderlabs/sigil/releases/download/v0.11.4/sigil-linux-amd64
+    linux-amd64: sha256:baa4f88061df94891b8a9944e943a578732edcd42b407080045b83879f543987
+    # https://github.com/gliderlabs/sigil/releases/download/v0.11.4/sigil-linux-arm64
+    linux-arm64: sha256:132460c7f7453f132e77d33efd044b90678facac55a92580cbf204cc859febe2
